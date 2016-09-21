@@ -1,7 +1,10 @@
-hello <%= name %>. What is your age
+Hello <%=name%>. What is your age?
+<form method="post" action="/age">
 
-<form action ="action_page.php">
-	
-	<input type="number" name= age min="1" max="120">
-	<input type="submit">
+    <input type= "number" min = "1" max = "150" name = "age>"
+
+    <input type="text" name="retrieved_name" value= <%=name%>hidden>
+
+    <input type="submit">
+
 </form>
