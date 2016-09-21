@@ -1,10 +1,8 @@
-Hello <%=name%>. What is your age?
-<form method="post" action="/age">
+Hello <%= name %>. How old are you?
+<form method = "post" action="/age">
 
-    <input type= "number" min = "1" max = "150" name = "age>"
-
-    <input type="text" name="retrieved_name" value= <%=name%>hidden>
-
-    <input type="submit">
-
+	<input type = "number" min = "1" max ="150" name ="age">
+	<input type = "text" name = "retrieved_name" value = <%= name %> hidden>
+	<input type = "submit">
 </form>
+
