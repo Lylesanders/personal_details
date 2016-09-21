@@ -27,5 +27,10 @@ get '/fav_nums' do
 	erb :get_favs , :locals =>{:name => name, :age => age}
 end
 post '/fav_nums' do
-  "Hello World"
+  age = params[:age]
+  name = params[:name]
+  fav1 = params[:user_fav1]
+  fav2 = params[:user_fav2]
+  fav3 = params[:user_fav3]
+  "Your favorite numbers are #{fav1}, #{fav2} and #{fav3}."
 end
