@@ -1,4 +1,6 @@
 require 'sinatra'
+require_relative 'addfunc.rb'
+
 
 get '/' do 
 	erb :get_name
@@ -32,5 +34,9 @@ post '/fav_nums' do
   fav1 = params[:user_fav1]
   fav2 = params[:user_fav2]
   fav3 = params[:user_fav3]
-  "Your favorite numbers are #{fav1}, #{fav2} and #{fav3}."
+  sum = add(fav1.to_i, fav2.to_i,fav3.to_i)
+  "Your favorite numbers are #{fav1}, #{fav2} and #{fav3}, that adds up to #{sum}"
+
+
+
 end
