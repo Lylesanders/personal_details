@@ -29,14 +29,20 @@ get '/fav_nums' do
 	erb :get_favs , :locals =>{:name => name, :age => age}
 end
 post '/fav_nums' do
-  age = params[:age]
+   age = params[:age]
   name = params[:name]
   fav1 = params[:user_fav1]
   fav2 = params[:user_fav2]
   fav3 = params[:user_fav3]
   sum = add(fav1.to_i, fav2.to_i,fav3.to_i)
-  "Your favorite numbers are #{fav1}, #{fav2} and #{fav3}, that adds up to #{sum}"
+ "your age = #{age}"
+if sum.to_i == age.to_i
+			"Hello #{name}, your favorite numbers add up to #{sum} which equals your age #{age}"
+		elsif sum.to_i < age.to_i
+			"Hello #{name}, your favorite numbers add up to #{sum} which is less than your age #{age}"
+			else
+				"Hello #{name}, your favorite numbers add up to #{sum} which is greater than your age #{age}"
 
-
+	end
 
 end
